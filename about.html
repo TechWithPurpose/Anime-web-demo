@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Аниме 動 - относно</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <!--The icons resource should be loaded before my css file-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+    
+    <style>
+        main {
+            display: block;
+            justify-items: center;
+            align-content: initial;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f2f2ee;
+            cursor: pointer;
+        }
+
+        a:hover {
+            font-weight: 800;
+            color: #695b2c;
+        }
+
+        #content {
+            width: 50%;
+			margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <!--The <header> element represents a container for 
+introductory content or a set of navigational links.-->
+<!--A <header> element typically contains:
+    1. one or more heading elements (<h1> - <h6>)
+    2. logo or icon
+    3. authorship information-->
+    <header>
+        <!--Logo image-->
+        <a href="home.html">
+        <img src="https://assets.onecompiler.app/43bkppfjd/43bkprhsg/logo-anime.png" alt="" id="logo">
+        </a>
+        <div class="dropdown">
+            <span class="material-symbols-rounded">menu</span>
+            <div class="content">
+              <a href="home.html">Начало</a>
+              <a href="ranking.html">Класация</a>
+              <a href="form.html">Препоръка</a>
+              <a href="about.html">Относно</a>
+            </div>
+        </div>
+    </header>
+    <div id="page-container">
+        <!--The <nav> tag defines a set of navigation links.-->
+        <nav>
+            <ul class="nav-bar">
+            <li class="nav-btn"><a href="home.html">
+                <span class="material-symbols-rounded icon">home</span>Начало
+            </a></li>
+            <li class="nav-btn"><a href="ranking.html">
+                <span class="material-symbols-rounded icon">target</span>Класация
+            </a></li>
+            <li class="nav-btn"><a href="form.html">
+                <span class="material-symbols-rounded icon">feedback</span>Препоръка
+            </a></li>
+            <li class="nav-btn"><a href="about.html" class="active"> 
+                <span class="material-symbols-rounded icon">info</span>Относно
+            </a></li>
+            </ul>
+        </nav>
+        <!--<main> specifies the main content of a document-->
+            <!--The content inside the <main> element should be unique to the document. 
+        It should not contain any content that is repeated across documents such as sidebars,
+        navigation links, copyright information, site logos, and search forms.-->
+        <main>
+            <div id="content">
+                <p id="AboutMe">Този сайт е създаден като част от университетска курсова задача
+                    по уеб програмиране. Заданието включва
+                    разработка на уебсайт по свободно избрана тема, състоящо се от няколко
+                    страници с фиксирани размери. Проектът съдържа адаптивно
+                    оформление чрез CSS media queries, интерактивно меню с rollover бутони,
+                    номериран списък с различно оцветяване на четни и нечетни редове, както
+                    и формуляр с проверка на валидността на въведените данни. Всички
+                    функционалности са реализирани с помощта на HTML5, CSS и JavaScript, в
+                    съответствие със съвременните уеб стандарти.
+                </p>
+                <div id="inspo">
+                    Вдъхновение за сайта: <a href="https://www.miruro.tv/" target="neww">miruro.tv</a>
+                </div>
+                <details id="img-sources">
+                    <summary>Източници на ресусрси:</summary>
+                    <ul>
+                        <li>Иконки: <a href="https://fonts.google.com/icons?icon.style=Rounded&icon.set=Material+Symbols&icon.size=24&icon.color=%231f1f1f" target="_blank">Google Fonts</a>
+
+                        </li>
+                        <li>Изображения:
+                            <ul>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-tanabata-poster-template-with-woman-holding-umbrella_28148690.htm#fromView=image_search_similar&page=1&position=45&uuid=82f2f3ca-a5fe-49db-9dc2-1ecf46d437ea&query=Anime+Poster" target="_blank">Tanabata Festival</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-ramen-poster-template_133738371.htm#fromView=image_search_similar&page=1&position=5&uuid=d0b50a36-029e-49f4-9101-eeb9ba8cff27&query=Anime+Poster" target="_blank">Ramen Restaurant (bowl)</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-japanese-dragon-poster-template_133752060.htm#fromView=image_search_similar&page=2&position=8&uuid=82f2f3ca-a5fe-49db-9dc2-1ecf46d437ea&query=Anime+Poster" target="_blank">Dragon Fest</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-ramen-poster-template_133782508.htm#fromView=image_search_similar&page=1&position=4&uuid=d0b50a36-029e-49f4-9101-eeb9ba8cff27&query=Anime+Poster" target="_blank">Ramen Cat</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-vertical-poster-template-lantern-festival-celebration_133712895.htm#fromView=image_search_similar&page=1&position=27&uuid=82f2f3ca-a5fe-49db-9dc2-1ecf46d437ea&query=Anime+Poster" target="_blank">Lantern Festival</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/flat-retro-gaming-poster_72151601.htm#fromView=image_search_similar&page=2&position=9&uuid=82f2f3ca-a5fe-49db-9dc2-1ecf46d437ea&query=Anime+Poster" target="_blank">Immersion</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-asian-style-poster-template_29807335.htm#fromView=search&page=1&position=5&uuid=764e767d-fc8a-4ad7-8e58-f4b932d20450&query=Asian+Kitsune+Kabuki+poster" target="_blank">Asian Kitsune Kabuki</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/music-festival-vertical-poster-template-with-creature_16156030.htm#fromView=image_search_similar&page=1&position=49&uuid=82f2f3ca-a5fe-49db-9dc2-1ecf46d437ea&query=Anime+Poster" target="_blank">This Guy</a></li>
+                                <li><a href="https://www.freepik.com/free-psd/anime-comic-style-poster-template_11236368.htm#fromView=image_search_similar&page=1&position=30&uuid=82f2f3ca-a5fe-49db-9dc2-1ecf46d437ea&query=Anime+Poster" target="_blank">Welcome to R11</a></li>
+                                <li><a href="https://www.freepik.com/free-vector/hand-drawn-ramen-poster-template_133738368.htm#fromView=image_search_similar&page=1&position=0&uuid=d0b50a36-029e-49f4-9101-eeb9ba8cff27&query=Anime+Poster" target="_blank">Ramen Restaurant (panda)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </details>
+            </div>
+        </main>
+        
+    </div>
+    <hr>
+    <footer>
+        <small>© Този сайт беше създаден от Н. Салим, използвайки HTML, CSS, and JS</small>
+    </footer>
+</body>
+</html>

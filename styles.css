@@ -1,0 +1,325 @@
+body {
+  width: 1200px; 
+  overflow: scroll;
+}
+
+header {
+  height: 50px;
+  background: #f3c845;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures the header stays on top of other content */
+}
+
+#logo {
+  height: 50px;
+}
+
+.dropdown {
+  display: none;
+}
+
+.nav-bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 80px;
+  height: 700px;
+  background: #f3c845;
+}
+
+
+.nav-bar a {
+  /*This is for how the icons/btns are being displayed*/
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  /*I do not like that outline but...*/
+  color: #010101;
+  /*outline: 0.5px solid #3e3d38;*/
+  border-style: solid;
+  border-width: 1px;
+  border-top: 0px;
+}
+
+
+.icon {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Change the link color on hover */
+.nav-bar a:hover:not(.active) {
+  background-color: #939793;
+  color: #f2f2ee;
+  text-decoration: underline;
+}
+
+li a.active {
+  background-color: #695b2c;
+  color: #f2f2ee;
+}
+
+
+main {
+  /* 1200px width minus 80px nav bar*/
+  width: 1120px;
+  /*Total height 900px minus 100px for the header and 100px for the footer*/
+  height: 700px;
+  background: #d8a50e;
+  display: grid;
+  grid-template-columns: repeat(4, 160px);
+  justify-content: space-around; /* Equal space on between items */
+  align-content: space-around;
+  gap: 4px;
+  
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*That wraps the img and play button*/
+.poster { 
+  position: relative;  /* Make span a positioned container */
+  display: inline-block; /* Make sure the span wraps the image and SVG */
+  cursor: pointer; /*Changes the look of my mouse*/
+}
+
+
+.poster-img {
+  width: 160px; /* Ensure the image takes up the full size of the container */
+  height: auto;   /* Maintain aspect ratio of the image */
+  
+}
+
+/* Hover effect */
+.poster:hover .play-img{
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  
+}
+
+.poster:hover+h5 {
+  color:#483e1e;
+  transition: color 0.2s ease-in-out;
+}
+
+.poster:hover .poster-img{
+  filter: brightness(0.7); /* Darkens the image */
+  transform: translateY(-8px); /* Moves up the poster img when hovered */
+}
+
+.play-img {
+  margin: auto;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  opacity: 0; /*makes it invisible - default state*/
+  top: 50%;  /* Vertically center */
+  left: 50%;  /* Horizontally center */
+  transform: translate(-50%, -50%); /* Offset the SVG by 50% of its width/height to ensure it's centered */
+  width: 30%;  /* Adjust the size of the play button */
+  height: auto;  /* Maintain aspect ratio of the SVG */
+}
+
+/*The h5 titles under each poster picture*/
+.poster-title {
+  display: block;
+  margin: 0; 
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.container-poster>h5:hover {
+  color: #483e1e;
+  background-color: #f3c63f;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+hr {
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  height: 80px;
+  width: 1200px;
+  background: #f3c63f;
+  align-items: center;
+  justify-content: center;
+}
+
+footer>small {
+  color:#555;
+}
+
+/*Makes the <nav> and <main> stay on the same level*/
+#page-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+/*Rules for when the screen is 800px or less*/
+@media screen and (max-width: 800px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  /*The menu option buttons*/
+  .dropdown {
+    display: inline-block;
+    
+  }
+
+  .dropdown span {
+    /*To select the background color to be something else?*/
+    color:#010101;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 7px;
+    margin-right: 7px;
+  }
+  
+  .dropdown:hover span {
+    background-color: #483e1e;
+    color: white;
+    
+  }
+
+  .dropdown a {
+    display: block;
+    color: #010101;
+    text-decoration: none;
+    padding: 10px 15px;
+    
+  }
+
+  .dropdown a:hover {
+    background-color: #939793;
+    color: #f2f2ee;
+    text-decoration: underline;
+  }
+
+  .dropdown .content {
+    display: none;
+    position: absolute;
+    background-color: #f6d46f;
+    min-width: 100px;
+              /*horizontal positioning, vertical positioning; blur; color */
+    box-shadow: 2px 2px 5px #4d4d4d;
+  }
+
+  .dropdown:hover .content {
+    display: block;
+    transform: translateX(-58px);
+  }
+
+  nav {
+    display: none;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  main {
+    /*Total height 900px minus 100px for the header and 100px for the footer*/
+    width: 100%;
+    height: 100%;
+    background: #d8a50e;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto;
+    justify-content: space-around; /* Equal space on between items */
+    align-content: space-around;
+    gap: 4px;
+  
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /*That wraps the img and play button*/
+  .poster { 
+    position: relative;  /* Make span a positioned container */
+    display: inline-block; /* Make sure the span wraps the image and SVG */
+    cursor: pointer; /*Changes the look of my mouse*/
+  }
+  
+  
+  .poster-img {
+    height: 100%;   /* Maintain aspect ratio of the image */
+    
+  }
+  
+  /* Hover effect */
+  .poster:hover .play-img{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    
+  }
+  
+  .poster:hover+h5 {
+    color:#483e1e;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .poster:hover .poster-img{
+    filter: brightness(0.7); /* Darkens the image */
+    transform: translateY(-8px); /* Moves up the poster img when hovered */
+  }
+  
+  .play-img {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    opacity: 0; /*makes it invisible - default state*/
+    top: 50%;  /* Vertically center */
+    left: 50%;  /* Horizontally center */
+    transform: translate(-50%, -50%); /* Offset the SVG by 50% of its width/height to ensure it's centered */
+    width: 30%;  /* Adjust the size of the play button */
+    height: auto;  /* Maintain aspect ratio of the SVG */
+  }
+  
+  /*The h5 titles under each poster picture*/
+  .poster-title {
+    display: block;
+    margin: 0; 
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .container-poster>h5:hover {
+    color: #483e1e;
+    background-color: #f3c63f;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+  
+  hr {
+    margin: 0;
+  }
+  
+  footer {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background: #f3c63f;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  footer>small {
+    color:#555;
+  }
+  
+  /*Makes the <nav> and <main> stay on the same level*/
+  #page-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

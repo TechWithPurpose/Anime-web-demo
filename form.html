@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Аниме 動 - форма</title>
+      <link rel="stylesheet" href="styles.css">
+      <meta charset="UTF-8">
+      <!--The icons resource should be loaded before my css file-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+      
+      <style>
+
+        main {
+          display: block;
+        }
+
+        form {
+          width: 300px;
+          /*Make the form a flex block so that I could center all the elements in it + text*/
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin: auto
+        }
+
+        form, h1 {
+          color: #12296c;
+		  
+        }
+
+        input {
+          text-align: center;
+        }
+
+        #form-buttons {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 17px;
+          margin-top: 10px;
+        }
+
+        #form-buttons input {
+          margin-right: 10px;
+          background-color: #12296c;
+          color: #f2f2ee;
+        }
+      </style>
+    </head>
+    <body onLoad="setUp()">
+        <header>
+            <!--Logo image-->
+            <a href="home.html">
+              <img src="https://assets.onecompiler.app/43bkppfjd/43bkprhsg/logo-anime.png" alt="" id="logo">
+            </a>
+            <div class="dropdown">
+              <span class="material-symbols-rounded">menu</span>
+              <div class="content">
+                <a href="home.html">Начало</a>
+                <a href="ranking.html">Класация</a>
+                <a href="form.html">Препоръка</a>
+                <a href="about.html">Относно</a>
+              </div>
+            </div>
+        </header>
+      <div id="page-container">
+          <nav>
+            <ul class="nav-bar">
+              <li class="nav-btn"><a href="home.html">
+                <span class="material-symbols-rounded icon">home</span>Начало
+              </a></li>
+              <li class="nav-btn"><a href="ranking.html">
+                <span class="material-symbols-rounded icon">target</span>Класация
+              </a></li>
+              <li class="nav-btn"><a class="active" href="">
+                <span class="material-symbols-rounded icon">feedback</span>Препоръка
+              </a></li>
+              <li class="nav-btn"><a href="about.html">
+                <span class="material-symbols-rounded icon">info</span>Относно
+              </a></li>
+            </ul>
+          </nav>
+        <main>
+
+          
+        <form id="RequestForm" name="RequestForm" action="" method="post">
+		  <h1>ПРЕПОРЪКА</h1>
+          <label for="fname">Собствено име:</label>
+          <input type="text" id="fname" name="fname" autocomplete="off" required="required"><br>
+          <label for="fnumber">Факултетен номер:</label>
+          <input type="number" id="fnumber" name="fnumber" min="100000" max="999999" autocomplete="off" required><br>
+          <label for="eaddress">Имейл адрес:</label>
+          <input type="email" id="eaddress" name="eaddress" autocomplete="off" required><br>
+          <label for="currdate">Дата:</label>
+          <input type="date" id="currdate" name="currdate" autocomplete="off" required><br>
+          <label for="pass">Парола:</label>
+          <input type="password" id="pass" name="pass" pattern="^[a-zA-Z0-9]{12,}$" title="Дължина
+          минимум 12 знака, използване на цифри, малки и големи букви" autocomplete="off" required><br>
+          <label for="checkpass">Потвърждение на парола:</label>
+          <input type="password" id="checkpass" name="checkpass" pattern="^[a-zA-Z0-9]{12,}$" autocomplete="off" required><br>
+          <label>Желание:</label>
+          <textarea rows="4" cols="50" name="comment"  required></textarea><br>
+          <div id="form-buttons">
+            <input type="submit" value="Изпрати" id="submitBtn"><br>
+            <input type="reset" value="Изчисти">
+          </div>
+        </form>
+        </main>  
+        </div>
+        <hr>
+        <footer>
+          <small>© Този сайт беше създаден от Н. Салим, използвайки HTML, CSS, and JS</small>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>

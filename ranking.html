@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Аниме 動 - класация</title>
+    <!--The icons resource should be loaded before my css file-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded">
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+
+    <style>
+        main {
+         display: block;
+         text-align: center;
+        }
+		
+
+        #rank-list {
+            list-style-type: upper-alpha;
+            list-style-position: inside; /*brings the A., B., etc. inside the content box — so they align better when the text is centered.*/
+            margin: 15px 260px 15px;
+            padding: 0;
+            font-size: medium;
+        }
+
+        #rank-list li{
+          justify-items: center;
+        }
+
+        .poster-img {
+          display: block;
+          margin: 10px auto 0px;
+        }
+
+        .oddNumLi {
+          color: #f2f2ee
+        }
+
+        .evenNumLi {
+          color: #faeab7;
+        }
+
+        h2 {
+          font-size: 25px;
+          color: #f2f2ee;
+          
+        }
+
+        h3 {
+          display: inline;
+        }
+
+        pre {
+          margin-top: 25px;
+        }
+
+
+        /*Rules for when the screen is 800px or less*/
+        @media screen and (max-width: 800px) {
+         
+        }
+    </style>
+</head>
+    <header>
+      <!--Logo image-->
+      <a href="home.html">
+        <img src="https://assets.onecompiler.app/43bkppfjd/43bkprhsg/logo-anime.png" alt="" id="logo">
+      </a>
+      <div class="dropdown">
+        <span class="material-symbols-rounded">menu</span>
+        <div class="content">
+          <a href="home.html">Начало</a>
+          <a href="ranking.html">Класация</a>
+          <a href="form.html">Препоръка</a>
+          <a href="about.html">Относно</a>
+        </div>
+      </div>
+    </header>
+    <div id="page-container">
+      <!--The <nav> tag defines a set of navigation links.-->
+        <nav>
+          <ul class="nav-bar">
+            <li class="nav-btn"><a href="home.html">
+              <span class="material-symbols-rounded icon">home</span>Начало
+            </a></li>
+            <li class="nav-btn"><a href="" class="active">
+              <span class="material-symbols-rounded icon">target</span>Класация
+            </a></li>
+            <li class="nav-btn"><a href="form.html">
+              <span class="material-symbols-rounded icon">feedback</span>Препоръка
+            </a></li>
+            <li class="nav-btn"><a href="about.html">
+              <span class="material-symbols-rounded icon">info</span>Относно
+            </a></li>
+          </ul>
+        </nav>
+      <!--<main> specifies the main content of a document-->
+      <main>
+        <h2>ТОП 4: </h2>
+        <ol id="rank-list">
+            <li class="oddNumLi">
+              <h3>Dragon Fest</h3>
+              <img src="Resources/Poster_3.jpg" alt="Play - Dragon Fest" class="poster-img">
+<pre id="SummaryDragonFest" class="oddNumLi">
+<em>Резюме:</em>
+Действието се развива в митична земя, където някога дракони са управлявали
+небесата. Dragon Fest проследява група странни авантюристи, които участват в
+турнир, провеждан веднъж на сто години в чест на ерата на драконите. Всеки етап от
+фестивала разкрива древни тайни за изчезването на драконите – и зловещата истина
+зад самия празник.
+
+<em>Защо е популярно:</em>
+Със спираща дъха анимация, напрегнати битки и дълбоко изградена митология,
+Dragon Fest съчетава епично фентъзи с емоционално разказване. Уникалната смесица
+от японски митове и съвременно шонен екшън го прави любим избор сред
+феновете.
+</pre>
+            </li>
+            <li class="evenNumLi">
+              <h3>Tanabata Festival</h3>
+              <img src="Resources/Poster_1.jpg" alt="Play - Tanabata Festival" class="poster-img">
+<pre id="SummaryTanabataFestival" class="evenNumLi">
+<em>Резюме:</em>
+Това аниме, в жанра „slice of life“, се развива в малко крайморско градче, което
+оживява всяка година по време на Фестивала на Танабата. Историята следва няколко
+преплетени съдби, изпълнени с любов, загуба и втори шансове, когато желанията,
+написани на хартиени звезди, започват да се сбъдват – често по неочакван начин.
+
+<em>Защо е популярно:</em>
+Tanabata Festival пленява с емоционалната си дълбочина, красивата ръчно рисувана
+визия и меланхоличния саундтрак. Темите за съдбата, носталгията и човешките
+връзки докосват зрителите и го правят предпочитано заглавие за любителите на
+драматични и чувствени истории.
+</pre>
+            </li>
+            <li class="oddNumLi">
+              <h3>Welcome to R11</h3>
+              <img src="./Resources/Poster_9.jpg" alt="Play - Welcome to R11" class="poster-img">
+<pre id="SummaryR11" class="oddNumLi">
+<em>Резюме:</em>
+В близкото бъдеще, R11 е автономна зона, населена от изгнаници, хакери и бунтари.
+Една интровертна програмистка случайно активира изкуствен интелект с опасно
+самосъзнание и скоро става мишена на мегакорпорации и подземни фракции.
+Welcome to R11 е киберпънк трилър с високо темпо и неочаквани обрати.
+
+<em>Защо е популярно:</em>
+Анимето впечатлява с неоновата си визия, напрегнатото действие и философските
+въпроси за идентичността, свободата и технологиите. Често е сравнявано с Psycho-
+Pass и Ghost in the Shell, привличайки фенове на дълбоки, мрачни сюжети.
+</pre>
+            </li>
+            <li class="evenNumLi">
+              <h3>Ramen Cat</h3>
+              <img src="Resources/Poster_4.jpg" alt="Play - Ramen Cat" class="poster-img">
+<pre id="SummaryRamenCat" class="evenNumLi">
+<em>Резюме:</em>
+Говореща котка, която прави най-доброто рамен в Токио? Ramen Cat е забавна и
+сърдечна история за Некоуджи – бездомна котка, която отваря собствена количка за
+рамен в малка уличка. Всеки епизод представя нови клиенти – от якиудза до духове –
+и споделя както юфка, така и мъдри съвети.
+
+<em>Защо е популярно:</em>
+Очарователно, леко и забавно – Ramen Cat се отличава със своето топло настроение
+и хумор. Перфектно за фенове на „food anime“, говорещи животни и уютни истории.
+</pre>
+            </li>
+        </ol>
+      </main>
+      
+    </div>
+    <hr>
+    <footer>
+      <small>© Този сайт беше създаден от Н. Салим, използвайки HTML, CSS, and JS</small>
+    </footer>
+</body>
+</html>
