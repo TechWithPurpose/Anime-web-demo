@@ -36,6 +36,7 @@ The project uses **HTML5, CSS3, and JavaScript**, with emphasis on clean structu
 3. No server setup needed as it is a static website.
 
 ## Demo
+![Demo of Anime Website](/Website-Demo.gif)
 
 ## License
 This project is licensed under the MIT License.
